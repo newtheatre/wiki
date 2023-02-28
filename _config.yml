@@ -48,6 +48,7 @@ sass:
     - _scss 
     - vendor/bundle/ruby/*/gems/bootstrap*/assets/stylesheets/ # GitHub Pages/Action 
     - /opt/build/cache/bundle/ruby/*/gems/bootstrap*/assets/stylesheets/ #Netlify 
+    - /usr/local/bundle/gems/bootstrap*/assets/stylesheets/ # Docker 
 
 collections:
   content:
