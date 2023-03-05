@@ -1,11 +1,28 @@
       <aside class="sidebar">
-        <div class="offcanvas-lg offcanvas-start bg-nnt-purple" tabindex="-1" id="wiki-sidebar" aria-labelledby="vn-title">
+        <div class="offcanvas-lg offcanvas-start bg-nnt-purple-dark" tabindex="-1" id="wiki-sidebar" aria-labelledby="vn-title">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="vn-title">NNT Wiki</h5>
+            <img src="{% link static/nt-logo-web.png %}" alt="The Nottingham New Theatre Logo" id="vn-title" height="70px">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body d-flex flex-column">
-            <p>Navigation will go here</p>
+            <p><img src="{% link static/nt-logo-web.png %}" alt="THe Nottingham New Theatre Logo" id="vn-title" height="70px" width="auto" class="d-none d-lg-block mx-auto"></p>
+            <h1 class="text-center">NNT Wiki</h1>
+
+            {% if site.data.sidebar %}
+            <h2 class="mt-4">Navigation</h2>
+            <ul class="sidebar-navigation">
+            {% for item in site.data.sidebar %}
+              <li>{% if item.icon %}<i class="fa fa-fw {{ item.icon }}" {% if item.icon_colour %}style="color: {{ item.icon_colour }}"{% endif %}></i>&nbsp;{% endif %}{{ item.title }}</li>
+              {% if item.pages %}
+                <ul class="mb-2">
+                  {% for subitem in item.pages %}
+                    <li><a href="{{ subitem.link }}">{{ subitem.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endfor %}
+            </ul>
+            {% endif %}
           </div>
         </div>
       </aside>

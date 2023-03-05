@@ -1,0 +1,28 @@
+- title: Introduction
+- title: About the Wiki 
+
+- title: Backstage
+  icon: fa-wrench 
+  icon_colour: teal
+  pages:
+    - title: Glossary
+
+- title: Tech Guides 
+  icon: fa-book 
+  icon_colour: red
+  pages:
+    - title: Lighting Guide 
+    - title: Comms Guide 
+
+- title: Links 
+  icon: fa-globe 
+  icon_colour: green 
+  pages:
+    - title: New Theatre Main Website
+      link: https://newtheatre.org.uk
+    - title: History Project 
+      link: https://history.newtheatre.org.uk
+    - title: Training Site 
+      link: https://training.newtheatre.org.uk
+    - title: Room Booking 
+      link: https://nottinghamnewtheatre.skedda.com/booking

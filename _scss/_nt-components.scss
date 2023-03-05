@@ -28,6 +28,10 @@
       box-shadow: $box-shadow-lg;
     }
   }
+  ul.sidebar-navigation, ul.sidebar-navigation ul {
+    list-style-type: none;
+    line-height: 2;
+  }
 }
 .main {
   grid-area: main;
