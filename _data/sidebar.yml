@@ -1,112 +1,113 @@
-- title: Introduction
-- title: About the Wiki 
-  link: _content/about.md
-  pages:
-    - title: Acknowledgements 
-      link: _content/acknowledgements.md
+sidebar: 
+  - title: Introduction
+  - title: About the Wiki 
+    link: _content/about.md
+    pages:
+      - title: Acknowledgements 
+        link: _content/acknowledgements.md
 
-- title: Backstage
-  icon: fa-wrench 
-  icon_colour: var(--bs-brand-alt)
-  link: _content/backstage.md
-  pages:
-    - title: Backstage Timetable 
-      link: _content/backstage/backstage-timetable.md
-    - title: Vision Meeting 
-    - title: Glossary
-      # link: _content/backstage/glossary.md 
+  - title: Backstage
+    icon: fa-wrench 
+    icon_colour: var(--bs-brand-alt)
+    link: _content/backstage.md
+    pages:
+      - title: Backstage Timetable 
+        link: _content/backstage/backstage-timetable.md
+      - title: Vision Meeting 
+      - title: Glossary
+        # link: _content/backstage/glossary.md 
 
-- title: Backstage Roles
-  icon: fa-users
-  icon_colour: var(--bs-stuff-crimson) 
-  pages: 
-    - title: Lighting Designer
-    - title: Sound Designer
-    - title: DSM
-    - title: Set Designer 
+  - title: Backstage Roles
+    icon: fa-users
+    icon_colour: var(--bs-stuff-crimson) 
+    pages: 
+      - title: Lighting Designer
+      - title: Sound Designer
+      - title: DSM
+      - title: Set Designer 
 
-- title: Tech Guides 
-  icon: fa-book 
-  icon_colour: var(--bs-stuff-yellow)
-  pages:
-    - title: Lighting Guide 
-    - title: Comms Guide 
-      link: _content/tech-guides/comms.md
-    - title: Atmospherics and Effects 
+  - title: Tech Guides 
+    icon: fa-book 
+    icon_colour: var(--bs-stuff-yellow)
+    pages:
+      - title: Lighting Guide 
+      - title: Comms Guide 
+        link: _content/tech-guides/comms.md
+      - title: Atmospherics and Effects 
 
-- title: Auditorium 
-  icon: fa-theater-masks
-  icon_colour: var(--bs-purple)
-  pages: 
-    - title: Power Procedure 
-      link: _content/auditorium/power-procedure.md
-    - title: Auditorium Lighting Guide 
-      pages: 
-        - title: Patching
-        - title: DMX
-    - title: Auditorium Sound Guide 
+  - title: Auditorium 
+    icon: fa-theater-masks
+    icon_colour: var(--bs-purple)
+    pages: 
+      - title: Power Procedure 
+        link: _content/auditorium/power-procedure.md
+      - title: Auditorium Lighting Guide 
+        pages: 
+          - title: Patching
+          - title: DMX
+      - title: Auditorium Sound Guide 
 
-- title: Studio 
-  icon: fa-theater-masks
-  icon_colour: var(--bs-orange)
-  pages: 
-    - title: Power Procedure
-    - title: Studio Lighting Guide
-    - title: Studio Sound Guide
-
-
-- title: Lighting
-  icon: fa-lightbulb 
-  icon_colour: var(--bs-stuff-violet) 
-  pages: 
-    - title: EOS Programming
-      pages: 
-        - title: Intro
-        - title: Operating
-        - title: Keyboard Shortcuts
-        - title: Augment3d 
-        - title: Tracking
-    - title: Lighting Fixtures
-    - title: Non-theatrical lights
-    - title: Anatomy of a light
-
-- title: Sound 
-  icon: fa-headphones 
-  icon_colour: var(--bs-stuff-turq)
-  pages: 
-    - title: Speakers 
-    - title: Microphones & Instruments 
-    - title: Sound Desk 
-    - title: QLab
-
-- title: Health, Safety & Welfare 
-  icon: fa-shield-heart 
-  icon_colour: var(--bs-stuff-crimson)
-  pages:
-    - title: Risk Assessments 
-    - title: Policies 
-    - title: Content Warnings 
+  - title: Studio 
+    icon: fa-theater-masks
+    icon_colour: var(--bs-orange)
+    pages: 
+      - title: Power Procedure
+      - title: Studio Lighting Guide
+      - title: Studio Sound Guide
 
 
-- title: Links 
-  icon: fa-globe 
-  icon_colour: green 
-  pages:
-    - title: New Theatre Main Website
-      link: https://newtheatre.org.uk
-      external: true
-    - title: Training Site 
-      link: https://training.newtheatre.org.uk
-      external: true
-    - title: Lighting Site 
-      link: https://lx.newtheatre.org.uk 
-      external: true 
-    - title: Backstage Catalogue 
-      link: https://backstage.newtheatre.org.uk 
-      external: true 
-    - title: History Project 
-      link: https://history.newtheatre.org.uk
-      external: true
-    - title: Room Booking 
-      link: https://nottinghamnewtheatre.skedda.com/booking
-      external: true
+  - title: Lighting
+    icon: fa-lightbulb 
+    icon_colour: var(--bs-stuff-violet) 
+    pages: 
+      - title: EOS Programming
+        pages: 
+          - title: Intro
+          - title: Operating
+          - title: Keyboard Shortcuts
+          - title: Augment3d 
+          - title: Tracking
+      - title: Lighting Fixtures
+      - title: Non-theatrical lights
+      - title: Anatomy of a light
+
+  - title: Sound 
+    icon: fa-headphones 
+    icon_colour: var(--bs-stuff-turq)
+    pages: 
+      - title: Speakers 
+      - title: Microphones & Instruments 
+      - title: Sound Desk 
+      - title: QLab
+
+  - title: Health, Safety & Welfare 
+    icon: fa-shield-heart 
+    icon_colour: var(--bs-stuff-crimson)
+    pages:
+      - title: Risk Assessments 
+      - title: Policies 
+      - title: Content Warnings 
+
+
+  - title: Links 
+    icon: fa-globe 
+    icon_colour: green 
+    pages:
+      - title: New Theatre Main Website
+        link: https://newtheatre.org.uk
+        external: true
+      - title: Training Site 
+        link: https://training.newtheatre.org.uk
+        external: true
+      - title: Lighting Site 
+        link: https://lx.newtheatre.org.uk 
+        external: true 
+      - title: Backstage Catalogue 
+        link: https://backstage.newtheatre.org.uk 
+        external: true 
+      - title: History Project 
+        link: https://history.newtheatre.org.uk
+        external: true
+      - title: Room Booking 
+        link: https://nottinghamnewtheatre.skedda.com/booking
+        external: true

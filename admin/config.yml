@@ -1,0 +1,54 @@
+# config.yml
+
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: 'static'
+collections:
+  - name: 'wiki'
+    label: 'Wiki Pages'
+    folder: '_content/'
+    create: true 
+    editor:
+      preview: true 
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Use "On This Page"', name: 'use_toc', widget: 'boolean', required: false }
+      - { label: 'Include safety disclaimer', name: 'safety_disclaimer', widget: 'boolean', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'sidebar'
+    label: 'Sidebar Navigation'
+    editor:
+      preview: false
+    files:
+      - label: 'Sidebar'
+        name: 'sidebar'
+        file: '_data/sidebar.yml'
+        fields:
+          - label: 'Sidebar Navigation Items'
+            name: 'items'
+            widget: 'list'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Link, name: link, widget: string }
+              - { label: Icon, name: icon, widget: string }
+              - { label: Icon Colour, name: icon_colour, widget: string }
+              - label: "Subpages"
+                name: "pages"
+                widget: "list"
+                fields: 
+                  - { label: Title, name: title, widget: string }
+                  - { label: Link, name: link, widget: string }
+                  - { label: Icon, name: icon, widget: string }
+                  - { label: Icon Colour, name: icon_colour, widget: string }
+
+
+
+
+
+
+
+
+
+
+
