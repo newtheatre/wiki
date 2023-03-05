@@ -423,7 +423,8 @@ hr.medium {
   .sidebar {
     position: sticky;
     display: block !important;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     padding: 1rem;
     margin-left: -1rem;
     overflow-y: auto;
@@ -442,8 +443,12 @@ hr.medium {
 
 @media (min-width: 992px) {
   .main {
-    display: grid;
     grid-area: main;
+  }
+}
+@media (min-width: 992px) {
+  .main.has-toc {
+    display: grid;
     grid-template-areas: "content toc";
     grid-template-columns: 7fr 3fr;
     gap: 1.5rem;
