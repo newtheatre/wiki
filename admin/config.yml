@@ -11,7 +11,8 @@ collections:
     label: 'Wiki Pages'
     folder: '_content/'
     create: true 
-    nested: 3
+    nested: 
+      depth: 5
     editor:
       preview: true 
     fields:
@@ -21,7 +22,8 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'sidebar'
     label: 'Sidebar Navigation'
-    nested: 2
+    nested: 
+      depth: 5
     editor:
       preview: false
     files:
