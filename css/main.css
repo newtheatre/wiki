@@ -367,7 +367,7 @@ a[class*=bg-nnt-orange]:hover {
   margin-left: 0rem;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   .table-of-contents {
     position: relative !important;
   }
@@ -436,13 +436,16 @@ hr.medium {
 }
 @media (min-width: 992px) {
   .sidebar {
-    position: sticky;
-    display: block !important;
-    min-height: 100vh;
-    height: 100%;
     padding: 1rem;
     margin-left: -1rem;
+  }
+}
+@media (min-width: 992px) {
+  .sidebar #wiki-sidebar {
+    display: block !important;
+    height: 100vh;
     overflow-y: auto;
+    align-self: start;
   }
 }
 @media (max-width: 991.98px) {
@@ -7518,7 +7521,7 @@ progress {
   }
 }
 @media (min-width: 992px) {
-  .sticky-lg-top {
+  .sticky-lg-top, .sidebar #wiki-sidebar {
     position: sticky;
     top: 0;
     z-index: 1020;
