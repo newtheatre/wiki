@@ -1,4 +1,4 @@
-// Generate colour and card classes 
+// Generate colour classes 
 @each $name, $color in $color-nnt {
   .nnt-#{$name} {
     color: $color; 
@@ -7,7 +7,7 @@
     background-color: $color !important;
   }
   .border-nnt-#{$name} {
-    border-color: $color;
+    border-color: $color !important;
   }
   .btn-nnt-#{$name} {
     border-color: $color;
@@ -16,6 +16,25 @@
       background-color: darken($color, 10%);
       border-color: darken($color, 10%);
     }
+  }
+}
+
+.card-nnt-purple {
+  @extend .border-nnt-purple;
+  .card-header {
+    @extend .bg-nnt-purple;
+  }
+  .card-body {
+    @extend .bg-nnt-purple-dark;
+  }
+}
+.card-nnt-orange {
+  @extend .border-nnt-orange;
+  .card-header {
+    @extend .bg-nnt-orange;
+  }
+  .card-body {
+    @extend .bg-nnt-orange-dark;
   }
 }
 
