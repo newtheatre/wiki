@@ -15,7 +15,8 @@
     // Override collapse behaviors
     // stylelint-disable-next-line declaration-no-important
     display: block !important;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     // Prevent focus styles to be cut off:
     padding: 1rem;
     margin-left: -1rem;
