@@ -64,9 +64,7 @@ defaults:
       layout: wiki-body
 
 prose:
-  # rooturl: '/'
-  siteurl: 'http://newtheatre.github.io/wiki/'
-  # relativeLinks: 'http://prose.github.io/starter/links.jsonp'
+  siteurl: 'https://newtheatre.github.io/wiki/'
   media: 'static'
   ignore:
     - _config.yml
@@ -78,6 +76,8 @@ prose:
     - /_layouts
     - /_scss 
     - /css 
+    - /.bundle 
+    - /.github 
   metadata:
     _content:
       - name: "title"
