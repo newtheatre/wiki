@@ -24,13 +24,13 @@ $body-bg: map-get($color-nnt, "background");
 $body-color: $color-text;
 
 @import "nt-animations";
-@import "nt-style";
 
 
 @import "bootstrap/maps";
 @import "bootstrap/mixins";
 @import "bootstrap/utilities";
 
+@import "nt-style";
 @import "nt-components";
 
 // Layout & components

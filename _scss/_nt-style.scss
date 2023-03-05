@@ -92,7 +92,7 @@ a[class*='bg-nnt-orange']{
   }
 }
 .table-of-contents { // Don't float TOCs on mobile or tablet
-  @media (max-width: map-get($grid-breakpoints, "lg")){
+  @include media-breakpoint-down(lg) {
     position: relative !important;
   }
   @extend .sticky-top;
