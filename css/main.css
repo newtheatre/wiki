@@ -6,6 +6,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -15,7 +16,7 @@
   color: #A54499;
 }
 
-.bg-nnt-purple, .sidebar {
+.bg-nnt-purple {
   background-color: #A54499 !important;
 }
 
@@ -36,7 +37,7 @@
   color: #5d2656;
 }
 
-.bg-nnt-purple-dark {
+.bg-nnt-purple-dark, .sidebar {
   background-color: #5d2656 !important;
 }
 
@@ -340,7 +341,7 @@ a[class*=bg-nnt-orange]:hover {
 
 .nt-navbar-nav li,
 .toc-item {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 
@@ -407,7 +408,7 @@ hr.medium {
   .wiki-wrapper {
     display: grid;
     grid-template-areas: "sidebar main";
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 2fr 6fr;
     gap: 1.5rem;
   }
 }
@@ -418,9 +419,8 @@ hr.medium {
 @media (min-width: 992px) {
   .sidebar {
     position: sticky;
-    top: 5rem;
     display: block !important;
-    height: calc(100vh - 6rem);
+    height: 100vh;
     padding: 1rem;
     margin-left: -1rem;
     overflow-y: auto;
@@ -431,6 +431,10 @@ hr.medium {
     border-right-color: var(--bs-border-color);
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   }
+}
+.sidebar ul.sidebar-navigation, .sidebar ul.sidebar-navigation ul {
+  list-style-type: none;
+  line-height: 2;
 }
 
 .main {
@@ -572,7 +576,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -6049,7 +6053,7 @@ progress {
   display: block;
   padding: var(--bs-tooltip-arrow-height);
   margin: var(--bs-tooltip-margin);
-  font-family: Open Sans, Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6159,7 +6163,7 @@ progress {
   z-index: var(--bs-popover-zindex);
   display: block;
   max-width: var(--bs-popover-max-width);
-  font-family: Open Sans, Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -8361,7 +8365,7 @@ progress {
   margin-right: auto !important;
 }
 
-.mb-0 {
+.mb-0, .footer p {
   margin-bottom: 0 !important;
 }
 

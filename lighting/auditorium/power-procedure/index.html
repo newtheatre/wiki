@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="/wiki/css/main.css?cachebust=202302152357">
+    <link rel="stylesheet" href="/wiki/css/main.css?cachebust=202303050116">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/e464ea3a91.js" crossorigin="anonymous"></script>
 
@@ -13,31 +13,81 @@
     <title>Powering On and Off</title>
   </head>
   <body class="h-100 d-flex flex-column bg-body">
-    <div class="container-fluid top-bar bg-nnt-purple">
-      <div class="row py-2">
-        <div class="col-auto">
-          <div class="sidebar-toggler d-block d-lg-none">
-            <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#wiki-sidebar" aria-controls="wiki-sidebar" aria-label="Toggle docs navigation">
-              <i class="fa fa-bars"></i>    
+    <div class="container-fluid top-bar bg-nnt-purple-dark d-block d-lg-none">
+      <div class="row p-2">
+        <div class="col-auto d-flex flex-row align-items-center">
+          <img src="/wiki/static/nt-logo-web.png" alt="THe Nottingham New Theatre Logo" height="60px" width="auto" class="my-2">
+          <h1 class="fs-5 ms-4 my-0">Nottingham New Theatre Wiki</h1>
+        </div>
+        <div class="col-auto ms-auto my-auto text-end">
+          <div class="sidebar-toggler">
+            <button class="navbar-toggler p-2 btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#wiki-sidebar" aria-controls="wiki-sidebar" aria-label="Toggle docs navigation">
+              <i class="fa fa-bars fa-2x"></i>    
               <span class="d-none fs-6 pe-1">Browse</span>
             </button>
           </div>
-        </div>
-        <div class="col-auto ms-auto">
-          <h6 class="text-end mb-0">Nottingham New Theatre Wiki</h6>
         </div>
       </div>
     </div>
 
     <div class="container-fluid wiki-wrapper">
             <aside class="sidebar">
-        <div class="offcanvas-lg offcanvas-start bg-nnt-purple" tabindex="-1" id="wiki-sidebar" aria-labelledby="vn-title">
+        <div class="offcanvas-lg offcanvas-start bg-nnt-purple-dark" tabindex="-1" id="wiki-sidebar" aria-labelledby="vn-title">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="vn-title">NNT Wiki</h5>
+            <img src="/wiki/static/nt-logo-web.png" alt="The Nottingham New Theatre Logo" id="vn-title" height="70px">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body d-flex flex-column">
-            <p>Navigation will go here</p>
+            <p><img src="/wiki/static/nt-logo-web.png" alt="THe Nottingham New Theatre Logo" id="vn-title" height="70px" width="auto" class="d-none d-lg-block mx-auto"></p>
+            <h1 class="text-center">NNT Wiki</h1>
+
+            
+            <h2 class="mt-4">Navigation</h2>
+            <ul class="sidebar-navigation">
+            
+              <li>Introduction</li>
+              
+            
+              <li>About the Wiki</li>
+              
+            
+              <li><i class="fa fa-fw fa-wrench" style="color: teal"></i>&nbsp;Backstage</li>
+              
+                <ul class="mb-2">
+                  
+                    <li><a href="">Glossary</a></li>
+                  
+                </ul>
+              
+            
+              <li><i class="fa fa-fw fa-book" style="color: red"></i>&nbsp;Tech Guides</li>
+              
+                <ul class="mb-2">
+                  
+                    <li><a href="">Lighting Guide</a></li>
+                  
+                    <li><a href="">Comms Guide</a></li>
+                  
+                </ul>
+              
+            
+              <li><i class="fa fa-fw fa-globe" style="color: green"></i>&nbsp;Links</li>
+              
+                <ul class="mb-2">
+                  
+                    <li><a href="https://newtheatre.org.uk">New Theatre Main Website</a></li>
+                  
+                    <li><a href="https://history.newtheatre.org.uk">History Project</a></li>
+                  
+                    <li><a href="https://training.newtheatre.org.uk">Training Site</a></li>
+                  
+                    <li><a href="https://nottinghamnewtheatre.skedda.com/booking">Room Booking</a></li>
+                  
+                </ul>
+              
+            
+            </ul>
+            
           </div>
         </div>
       </aside>
@@ -46,7 +96,7 @@
   
       </main>
     </div>
-    <div class="container-fluid footer bg-nnt-purple-dark mt-auto text-center py-4">
+    <div class="container-fluid footer bg-nnt-purple-dark mt-auto text-center py-3">
 	<p class="footer">&copy; <a href="https://newtheatre.org.uk/">The Nottingham New Theatre</a> 2023</p>
 </div>
 
