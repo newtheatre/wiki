@@ -2,20 +2,20 @@
   @include media-breakpoint-up(lg) {
     display: grid;
     grid-template-areas: "sidebar main";
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 2fr 6fr;
     gap: $grid-gutter-width;
   }
 }
 .sidebar {
   grid-area: sidebar;
-  @extend .bg-nnt-purple;
+  @extend .bg-nnt-purple-dark;
   @include media-breakpoint-up(lg) {
     position: sticky;
-    top: 5rem;
+    // top: 5rem;
     // Override collapse behaviors
     // stylelint-disable-next-line declaration-no-important
     display: block !important;
-    height: subtract(100vh, 6rem);
+    height: 100vh;
     // Prevent focus styles to be cut off:
     padding: 1rem;
     margin-left: -1rem;
