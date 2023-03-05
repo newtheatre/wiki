@@ -64,6 +64,19 @@ a[class*='bg-nnt-orange']{
 .nt-navbar-nav .active {
   font-weight: 700; // More contrast then the colour change
 }
+.sidebar {
+  a.sidebar-link {
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+      span {
+        text-decoration: underline;
+      }
+    }
+    &.active {
+      font-weight: 700;
+    }
+  }
+}
 .toc-list {
   @extend .nav, .flex-column;
 }
@@ -110,7 +123,16 @@ blockquote {
 
 // Page Content 
 
-.content {
+.wiki-page-content {
+  h1.page-title {
+    border: none;
+    padding: 0;
+    @extend .nnt-purple;
+    @extend .display-2, .text-center;
+  }
+}
+
+article {
   > h1, [class*="col"] > h1 {
     border-left: 6px solid map-get($color-nnt, "purple");
     padding-left: 1rem;

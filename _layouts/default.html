@@ -32,7 +32,7 @@
 
     <div class="container-fluid wiki-wrapper">
       {% include components/sidebar.html %}
-      <main class="content main {% if page.use_toc == true %}has-toc{% endif %} pt-4">
+      <main class="content {% if page.use_toc == true %}has-toc{% endif %} pt-4 px-sm-4 px-lg-1 mb-4">
         {{ content }} 
       </main>
     </div>

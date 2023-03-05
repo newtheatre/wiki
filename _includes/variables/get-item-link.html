@@ -1,0 +1,17 @@
+{% assign i = include.item %}
+{% assign active = false %}
+{% if i.link and i.link != empty %}
+	{% assign first_char = i.link | slice: 0 %}
+	{% if first_char == '_' %}
+		{% capture i_link %}{% link {{ i.link }} %}{% endcapture %}
+		{% if page.path == i.link %}{% assign active = true %}{% endif %}
+	{% elsif first_char == 'h' %}
+		{% assign i_link = i.link %}
+		{% capture full_url %}{{ site.url }}{{ page.url }}{% endcapture %}
+		{% if full_url == i_link %}{% assign active = true %}{% endif %}
+	{% else %}
+		{% assign i_link = false %}
+	{% endif %}
+{% else %}
+	{% assign i_link = false %}
+{% endif %}

@@ -5,18 +5,20 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body d-flex flex-column">
-            <p><img src="{% link static/nt-logo-web.png %}" alt="THe Nottingham New Theatre Logo" id="vn-title" height="70px" width="auto" class="d-none d-lg-block mx-auto"></p>
-            <h1 class="text-center">NNT Wiki</h1>
+            <p><a href="{% link _content/index.md %}"><img src="{% link static/nt-logo-web.png %}" alt="THe Nottingham New Theatre Logo" id="vn-title" height="70px" width="auto" class="d-none d-lg-block mx-auto"></a></p>
+            <h1 class="text-center"><a href="{% link _content/index.md %}" class="text-white">NNT Wiki</a></h1>
 
             {% if site.data.sidebar %}
             <h2 class="mt-4">Navigation</h2>
             <ul class="sidebar-navigation">
             {% for item in site.data.sidebar %}
-              <li>{% if item.icon %}<i class="fa fa-fw {{ item.icon }}" {% if item.icon_colour %}style="color: {{ item.icon_colour }}"{% endif %}></i>&nbsp;{% endif %}{{ item.title }}</li>
+              <li>
+                {% include components/sidebar-item.html item=item %}
+              </li>
               {% if item.pages %}
                 <ul class="mb-2">
-                  {% for subitem in item.pages %}
-                    <li><a href="{{ subitem.link }}">{{ subitem.title }}</a></li>
+                  {% for subpage in item.pages %}
+                    <li>{% include components/sidebar-item.html item=subpage %}</li>
                   {% endfor %}
                 </ul>
               {% endif %}

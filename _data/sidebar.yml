@@ -4,7 +4,10 @@
 - title: Backstage
   icon: fa-wrench 
   icon_colour: teal
+  link: _content/backstage.md
   pages:
+    - title: Backstage Timetable 
+      link: _content/backstage/backstage-timetable.md
     - title: Glossary
 
 - title: Tech Guides 
@@ -20,9 +23,13 @@
   pages:
     - title: New Theatre Main Website
       link: https://newtheatre.org.uk
+      external: true
     - title: History Project 
       link: https://history.newtheatre.org.uk
+      external: true
     - title: Training Site 
       link: https://training.newtheatre.org.uk
+      external: true
     - title: Room Booking 
       link: https://nottinghamnewtheatre.skedda.com/booking
+      external: true
