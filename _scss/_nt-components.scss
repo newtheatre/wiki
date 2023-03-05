@@ -35,11 +35,15 @@
 }
 .main {
   @include media-breakpoint-up(lg){
-    display: grid;
     grid-area: main;
-    grid-template-areas: "content toc";
-    grid-template-columns: 7fr 3fr; 
-    gap: $grid-gutter-width;
+  }
+  &.has-toc {
+    @include media-breakpoint-up(lg){
+      display: grid;
+      grid-template-areas: "content toc";
+      grid-template-columns: 7fr 3fr; 
+      gap: $grid-gutter-width;
+    }
   }
 }
 
