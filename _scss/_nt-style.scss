@@ -128,7 +128,7 @@ blockquote {
     border: none;
     padding: 0;
     @extend .nnt-purple;
-    @extend .display-2, .text-center;
+    @extend .display-2, .text-center, .mb-4;
   }
 }
 

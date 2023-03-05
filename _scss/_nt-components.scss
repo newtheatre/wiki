@@ -30,16 +30,25 @@
       box-shadow: $box-shadow-lg;
     }
   }
+  ul.sidebar-navigation {
+    margin-left: -1rem;
+  }
   ul.sidebar-navigation, ul.sidebar-navigation ul {
     list-style-type: none;
     line-height: 2;
+    li span {
+      margin-left: 2px;
+      text-indent: -2px;
+    }
   }
 }
 main {
+  @extend .mx-lg-5;
   @include media-breakpoint-up(lg){
     grid-area: main;
   }
   &.has-toc {
+    @extend .mx-lg-2;
     @include media-breakpoint-up(lg){
       display: grid;
       grid-template-areas: "content toc";
