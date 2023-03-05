@@ -5,5 +5,8 @@ layout: wiki-page
 <h1 class="page-title">{{ page.title }}</h1>
 
 <article>
+	{% if page.safety_disclaimer %}
+		{% include components/safety-disclaimer.html %}
+	{% endif %}
 	{{ content | markdownify }}
 </article>

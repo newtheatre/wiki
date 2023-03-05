@@ -1,6 +1,6 @@
 ---
 title: Powering On and Off
-safety: true 
+safety_disclaimer: true 
 use_toc: true 
 ---
 
