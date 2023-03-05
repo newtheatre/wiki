@@ -42,15 +42,26 @@ The DSM will typically call a show in the following manner:
 # Comms Etiquette 
 The following things are good practice and give clarity to everyone else on comms, avoiding waiting around and frustration.
 * [Name] On / Off cans 
+
 Announcing when you're taking your headset off and when you're back is greatly important and aid the rapid relay of information across departments. 
+
 * Comms check 
+
 Each comms user should do a quick announcement and check when they arrive at the beginning of the day to make sure everything is working and at an appropriate volume.
+
 * Leaving your mic on
+
 It is up to you whether you leave your mic on when you're not speaking. People who need their hands a lot and can't press the button (eg stage managers turning pages) will often keep theirs on, whereas others will turn it off.
-Please turn the mic off if you need to drink, cough, etc. No one wants to hear a sneeze or a chew very loudly in their ear.
+
+Please turn the mic off if you need to drink, cough, etc. No one wants to hear a sneeze or a chew very loudly in their 
+ear.
+
 * Why bother?
+
 Although many of the people working on the show are in the tech box together, using comms provides clarity and amplification, as well as being able to guarantee you can hear any calls from the stage for whatever reason.
+
 * Standby acknowledgement  
+
 A DSM will often call cue standbys, and may prefer you to acknowledge that you have heard the standby and are ready to perform the cue. Do clarify with the SM whether they would like acknowledgements, and acknowledge in the order standbys were given (eg if the call is 'Standby LX7, SFX 8' then the sound operator should acknowledge first).
 
 When a standby is called, all comms should be silent until the ‘go’ is called or the standby is dismissed. 
