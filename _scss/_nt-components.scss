@@ -7,20 +7,21 @@
   }
 }
 .sidebar {
+  @extend .bg-nnt-purple-dark; // Ensure the background is full height of the page when the page is longer than the viewport
   grid-area: sidebar;
-  @extend .bg-nnt-purple-dark;
   @include media-breakpoint-up(lg) {
-    position: sticky;
-    // top: 5rem;
-    // Override collapse behaviors
-    // stylelint-disable-next-line declaration-no-important
-    display: block !important;
-    min-height: 100vh;
-    height: 100%;
-    // Prevent focus styles to be cut off:
     padding: 1rem;
     margin-left: -1rem;
-    overflow-y: auto;
+  }
+  #wiki-sidebar {  
+    @extend .sticky-lg-top;
+    @include media-breakpoint-up(lg) {
+      // Override collapse behaviors
+      display: block !important;
+      height: 100vh;
+      overflow-y: auto; // Takes full height of the viewport and then independently scrolls 
+      align-self: start;  // For position sticky
+    }
   }
 
   @include media-breakpoint-down(lg) {
