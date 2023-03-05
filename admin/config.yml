@@ -1,8 +1,10 @@
 # config.yml
 
 backend:
-  name: git-gateway
+  name: github
+  repo: newtheatre/newtheatre.github.io
   branch: main # Branch to update (optional; defaults to master)
+  site_domain: nnt-wiki.netlify.com
 media_folder: 'static'
 collections:
   - name: 'wiki'
