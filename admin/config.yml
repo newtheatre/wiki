@@ -2,7 +2,7 @@
 
 backend:
   name: github
-  repo: newtheatre/newtheatre.github.io
+  repo: newtheatre/wiki
   branch: main # Branch to update (optional; defaults to master)
   site_domain: nnt-wiki.netlify.com
 media_folder: 'static'
