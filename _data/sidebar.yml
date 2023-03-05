@@ -8,7 +8,17 @@
   pages:
     - title: Backstage Timetable 
       link: _content/backstage/backstage-timetable.md
+    - title: Vision Meeting 
     - title: Glossary
+
+- title: Backstage Roles
+  icon: fa-user 
+  icon_colour: blue 
+  pages: 
+    - title: Lighting Designer
+    - title: Sound Designer
+    - title: DSM
+    - title: Set Designer 
 
 - title: Tech Guides 
   icon: fa-book 
@@ -16,6 +26,41 @@
   pages:
     - title: Lighting Guide 
     - title: Comms Guide 
+    - title: Atmospherics and Effects 
+
+- title: Auditorium 
+  icon: fa-theater-masks
+  icon_colour: nnt-purple 
+  pages: 
+    - title: Power Procedure 
+    - title: Auditorium Lighting Guide 
+      pages: 
+        - title: Patching
+        - title: DMX
+    - title: Auditorium Sound Guide 
+
+- title: Studio 
+  pages: 
+    - title: Power Procedure
+    - title: Studio Lighting Guide
+    - title: Studio Sound Guide
+
+
+- title: Lighting
+  icon: fa-lightbulb 
+  icon_colour: white 
+  pages: 
+    - title: EOS Programming
+      pages: 
+        - title: Intro
+        - title: Operating
+        - title: Keyboard Shortcuts
+        - title: Augment3d 
+        - title: Tracking
+    - title: Lighting Fixtures
+    - title: Non-theatrical lights
+    - title: Anatomy of a light
+
 
 - title: Links 
   icon: fa-globe 
