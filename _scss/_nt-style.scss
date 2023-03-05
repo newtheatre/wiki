@@ -111,6 +111,6 @@ hr {
 
 .footer {
   p { 
-    @extend .small 
+    @extend .small, .mb-0;
   }
 }
