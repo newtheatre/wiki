@@ -61,4 +61,4 @@ defaults:
   - scope:
       type: content
     values:
-      layout: wiki 
+      layout: wiki-body

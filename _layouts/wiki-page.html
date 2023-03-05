@@ -9,16 +9,19 @@ layout: page
 				<h2>On this page</h2>
 			</div>
 			<div class="card-body toc-wrapper" id="toc-wrapper">
-				{% include components/toc.html html=content class="toc-list" sanitize=true item_class="toc-item" %}
+				{% assign h_max = page.toc_level | default: 2 %}
+				{% include components/toc.html html=content class="toc-list" sanitize=true item_class="toc-item" skip_no_ids=true h_max=h_max %}
 			</div>
 		</div>
 	</aside>
 	<hr class="text-nnt-orange my-3 d-lg-none w-100">
-	<main class="order-2 order-lg-1" data-bs-spy="scroll" data-bs-target="#toc-wrapper" data-bs-smooth-scroll="true" data-bs-rootMargin="0 0 0 0" tabindex="0">
+	<section class="wiki-page-content order-2 order-lg-1" data-bs-spy="scroll" data-bs-target="#toc-wrapper" data-bs-smooth-scroll="true" data-bs-rootMargin="0 0 0 0" tabindex="0">
 		{{ content | markdownify }} 
-	</main>
+	</section>
 {% else %}
-	{{ content | markdownify }}
+	<section class="wiki-page-content">
+		{{ content | markdownify }}
+	</section>
 {% endif %}
 
 <script>
@@ -29,8 +32,8 @@ layout: page
   // $('body').scrollspy({ selector: '.toc-item', offset: 40 });
 
   // Insert horizontal rule before each subsequent h1 to visually separate sections
-  document.querySelectorAll('h1:nth-of-type(n+2)').forEach((el) => {
-  	el.parentNode.insertBefore(document.createElement("hr"), el);
+  document.querySelectorAll('article > h1:nth-of-type(n+2)').forEach((el) => {
+  	el.parentNode.insertBefore(document.createElement("hr"), el).className += 'mb-5';
   });
 
 </script>

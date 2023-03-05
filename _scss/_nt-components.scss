@@ -34,7 +34,7 @@
     line-height: 2;
   }
 }
-.main {
+main {
   @include media-breakpoint-up(lg){
     grid-area: main;
   }
