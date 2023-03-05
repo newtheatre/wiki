@@ -79,6 +79,14 @@
     - title: Sound Desk 
     - title: QLab
 
+- title: Health, Safety & Welfare 
+  icon: fa-shield-heart 
+  icon_colour: var(--bs-stuff-crimson)
+  pages:
+    - title: Risk Assessments 
+    - title: Policies 
+    - title: Content Warnings 
+
 
 - title: Links 
   icon: fa-globe 
@@ -87,11 +95,17 @@
     - title: New Theatre Main Website
       link: https://newtheatre.org.uk
       external: true
-    - title: History Project 
-      link: https://history.newtheatre.org.uk
-      external: true
     - title: Training Site 
       link: https://training.newtheatre.org.uk
+      external: true
+    - title: Lighting Site 
+      link: https://lx.newtheatre.org.uk 
+      external: true 
+    - title: Backstage Catalogue 
+      link: https://backstage.newtheatre.org.uk 
+      external: true 
+    - title: History Project 
+      link: https://history.newtheatre.org.uk
       external: true
     - title: Room Booking 
       link: https://nottinghamnewtheatre.skedda.com/booking
