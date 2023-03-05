@@ -1,19 +1,24 @@
 - title: Introduction
 - title: About the Wiki 
+  link: _content/about.md
+  pages:
+    - title: Acknowledgements 
+      link: _content/acknowledgements.md
 
 - title: Backstage
   icon: fa-wrench 
-  icon_colour: teal
+  icon_colour: var(--bs-brand-alt)
   link: _content/backstage.md
   pages:
     - title: Backstage Timetable 
       link: _content/backstage/backstage-timetable.md
     - title: Vision Meeting 
     - title: Glossary
+      # link: _content/backstage/glossary.md 
 
 - title: Backstage Roles
-  icon: fa-user 
-  icon_colour: blue 
+  icon: fa-users
+  icon_colour: var(--bs-stuff-crimson) 
   pages: 
     - title: Lighting Designer
     - title: Sound Designer
@@ -22,17 +27,19 @@
 
 - title: Tech Guides 
   icon: fa-book 
-  icon_colour: red
+  icon_colour: var(--bs-stuff-yellow)
   pages:
     - title: Lighting Guide 
     - title: Comms Guide 
+      link: _content/tech-guides/comms.md
     - title: Atmospherics and Effects 
 
 - title: Auditorium 
   icon: fa-theater-masks
-  icon_colour: nnt-purple 
+  icon_colour: var(--bs-purple)
   pages: 
     - title: Power Procedure 
+      link: _content/auditorium/power-procedure.md
     - title: Auditorium Lighting Guide 
       pages: 
         - title: Patching
@@ -40,6 +47,8 @@
     - title: Auditorium Sound Guide 
 
 - title: Studio 
+  icon: fa-theater-masks
+  icon_colour: var(--bs-orange)
   pages: 
     - title: Power Procedure
     - title: Studio Lighting Guide
@@ -48,7 +57,7 @@
 
 - title: Lighting
   icon: fa-lightbulb 
-  icon_colour: white 
+  icon_colour: var(--bs-stuff-violet) 
   pages: 
     - title: EOS Programming
       pages: 
@@ -60,6 +69,15 @@
     - title: Lighting Fixtures
     - title: Non-theatrical lights
     - title: Anatomy of a light
+
+- title: Sound 
+  icon: fa-headphones 
+  icon_colour: var(--bs-stuff-turq)
+  pages: 
+    - title: Speakers 
+    - title: Microphones & Instruments 
+    - title: Sound Desk 
+    - title: QLab
 
 
 - title: Links 

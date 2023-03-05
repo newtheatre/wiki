@@ -160,7 +160,7 @@ _(For In House: At the end move the tech desk back to the tech box ready for dre
 * DSM check the book is still there and there are no changes to cues
 * ASM check all the props are set
 
-# Get Out: 
+# Get Out
 > In House: Saturday Night | Studio: Tuesday Night
 
 ## What happens?
