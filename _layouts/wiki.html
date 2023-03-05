@@ -2,4 +2,35 @@
 layout: page
 ---
 
-{{ content | markdownify }}
+{% if page.use_toc %}
+	<aside class="table-of-contents order-1 order-lg-2">
+		<div class="card card-nnt-purple mb-4">
+			<div class="card-header">
+				<h2>On this page</h2>
+			</div>
+			<div class="card-body toc-wrapper" id="toc-wrapper">
+				{% include components/toc.html html=content class="toc-list" sanitize=true item_class="toc-item" %}
+			</div>
+		</div>
+	</aside>
+	<hr class="text-nnt-orange my-3 d-lg-none w-100">
+	<main class="order-2 order-lg-1" data-bs-spy="scroll" data-bs-target="#toc-wrapper" data-bs-smooth-scroll="true" data-bs-rootMargin="0 0 0 0" tabindex="0">
+		{{ content | markdownify }} 
+	</main>
+{% else %}
+	{{ content | markdownify }}
+{% endif %}
+
+<script>
+  //Add class to TOC anchors (must have this class for Scrollspy to work 
+  document.querySelectorAll('.toc-item a').forEach((el) => {
+  	el.className += 'nav-link';
+  });
+  // $('body').scrollspy({ selector: '.toc-item', offset: 40 });
+
+  // Insert horizontal rule before each subsequent h1 to visually separate sections
+  document.querySelectorAll('h1:nth-of-type(n+2)').forEach((el) => {
+  	el.parentNode.insertBefore(document.createElement("hr"), el);
+  });
+
+</script>

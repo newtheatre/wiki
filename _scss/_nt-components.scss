@@ -34,5 +34,16 @@
   }
 }
 .main {
-  grid-area: main;
+  @include media-breakpoint-up(lg){
+    display: grid;
+    grid-area: main;
+    grid-template-areas: "content toc";
+    grid-template-columns: 7fr 3fr; 
+    gap: $grid-gutter-width;
+  }
+}
+
+.table-of-contents {
+  grid-area: toc; 
+  align-self: start; // Necessary for position:sticky with display:grid
 }

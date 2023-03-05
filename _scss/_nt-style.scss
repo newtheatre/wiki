@@ -64,16 +64,25 @@ a[class*='bg-nnt-orange']{
 .nt-navbar-nav .active {
   font-weight: 700; // More contrast then the colour change
 }
-
-.toc-item a.active { // Table of Contents highlighter
-  border-right: 4px solid $color-nnt-orange;
-  margin-left: -1rem;
+.toc-list {
+  @extend .nav, .flex-column;
 }
-
-.toc-column { // Don't float TOCs on mobile or tablet
+.toc-item {
+  @extend .nav-item, .p-0; 
+  a {
+    @extend .py-0; 
+    margin-left: 1rem;
+    &.active {
+      border-right: 4px solid $color-nnt-orange;
+      margin-left: 0rem;
+    }
+  }
+}
+.table-of-contents { // Don't float TOCs on mobile or tablet
   @media (max-width: map-get($grid-breakpoints, "lg")){
     position: relative !important;
   }
+  @extend .sticky-top;
 }
 
 // Elements 
