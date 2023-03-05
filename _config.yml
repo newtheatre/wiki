@@ -64,7 +64,7 @@ defaults:
       layout: wiki-body
 
 prose:
-  rooturl: '_content'
+  rooturl: '/'
   siteurl: 'http://newtheatre.github.io/wiki/'
   # relativeLinks: 'http://prose.github.io/starter/links.jsonp'
   media: 'static'
