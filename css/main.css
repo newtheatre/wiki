@@ -12,7 +12,7 @@
     scroll-behavior: smooth;
   }
 }
-.nnt-purple, .bg-nnt-orange a, .card-nnt-orange .card-header a {
+.nnt-purple, .wiki-page-content h1.page-title, .wiki-page-content .page-title.h1, .bg-nnt-orange a, .card-nnt-orange .card-header a {
   color: #A54499;
 }
 
@@ -349,6 +349,16 @@ a[class*=bg-nnt-orange]:hover {
   font-weight: 700;
 }
 
+.sidebar a.sidebar-link:hover, .sidebar a.sidebar-link:focus, .sidebar a.sidebar-link:active {
+  text-decoration: none;
+}
+.sidebar a.sidebar-link:hover span, .sidebar a.sidebar-link:focus span, .sidebar a.sidebar-link:active span {
+  text-decoration: underline;
+}
+.sidebar a.sidebar-link.active {
+  font-weight: 700;
+}
+
 .toc-item a {
   margin-left: 1rem;
 }
@@ -385,15 +395,20 @@ blockquote {
   content: "— ";
 }
 
-.content > h1, .content > .h1, .content [class*=col] > h1, .content [class*=col] > .h1 {
+.wiki-page-content h1.page-title, .wiki-page-content .page-title.h1 {
+  border: none;
+  padding: 0;
+}
+
+article > h1, article > .h1, article [class*=col] > h1, article [class*=col] > .h1 {
   border-left: 6px solid #A54499;
   padding-left: 1rem;
 }
-.content > h2, .content > .h2, .content [class*=col] > h2, .content [class*=col] > .h2 {
+article > h2, article > .h2, article [class*=col] > h2, article [class*=col] > .h2 {
   border-left: 3px solid #FFC425;
   padding-left: 0.5rem;
 }
-.content ul, .content ol {
+article ul, article ol {
   margin-left: -1rem;
 }
 
@@ -442,12 +457,12 @@ hr.medium {
 }
 
 @media (min-width: 992px) {
-  .main {
+  main {
     grid-area: main;
   }
 }
 @media (min-width: 992px) {
-  .main.has-toc {
+  main.has-toc {
     display: grid;
     grid-template-areas: "content toc";
     grid-template-columns: 7fr 3fr;
@@ -982,13 +997,13 @@ progress {
   }
 }
 
-.display-2 {
+.display-2, .wiki-page-content h1.page-title, .wiki-page-content .page-title.h1 {
   font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
-  .display-2 {
+  .display-2, .wiki-page-content h1.page-title, .wiki-page-content .page-title.h1 {
     font-size: 4.5rem;
   }
 }
@@ -2217,7 +2232,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
-.table, .content table {
+.table, article table {
   --bs-table-color: var(--bs-body-color);
   --bs-table-bg: transparent;
   --bs-table-border-color: var(--bs-border-color);
@@ -2234,16 +2249,16 @@ progress {
   vertical-align: top;
   border-color: var(--bs-table-border-color);
 }
-.table > :not(caption) > * > *, .content table > :not(caption) > * > * {
+.table > :not(caption) > * > *, article table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
   background-color: var(--bs-table-bg);
   border-bottom-width: 1px;
   box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
-.table > tbody, .content table > tbody {
+.table > tbody, article table > tbody {
   vertical-align: inherit;
 }
-.table > thead, .content table > thead {
+.table > thead, article table > thead {
   vertical-align: bottom;
 }
 
@@ -2255,7 +2270,7 @@ progress {
   caption-side: top;
 }
 
-.table-sm > :not(caption) > * > *, .content table > :not(caption) > * > * {
+.table-sm > :not(caption) > * > *, article table > :not(caption) > * > * {
   padding: 0.25rem 0.25rem;
 }
 
@@ -2273,7 +2288,7 @@ progress {
   border-top-width: 0;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) > *, .content table > tbody > tr:nth-of-type(odd) > * {
+.table-striped > tbody > tr:nth-of-type(odd) > *, article table > tbody > tr:nth-of-type(odd) > * {
   --bs-table-accent-bg: var(--bs-table-striped-bg);
   color: var(--bs-table-striped-color);
 }
@@ -2288,7 +2303,7 @@ progress {
   color: var(--bs-table-active-color);
 }
 
-.table-hover > tbody > tr:hover > *, .content table > tbody > tr:hover > * {
+.table-hover > tbody > tr:hover > *, article table > tbody > tr:hover > * {
   --bs-table-accent-bg: var(--bs-table-hover-bg);
   color: var(--bs-table-hover-color);
 }
@@ -2405,7 +2420,7 @@ progress {
   border-color: var(--bs-table-border-color);
 }
 
-.table-responsive, .content table {
+.table-responsive, article table {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -8732,7 +8747,7 @@ progress {
   text-align: right !important;
 }
 
-.text-center {
+.text-center, .wiki-page-content h1.page-title, .wiki-page-content .page-title.h1 {
   text-align: center !important;
 }
 
