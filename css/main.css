@@ -454,9 +454,16 @@ hr.medium {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   }
 }
+.sidebar ul.sidebar-navigation {
+  margin-left: -1rem;
+}
 .sidebar ul.sidebar-navigation, .sidebar ul.sidebar-navigation ul {
   list-style-type: none;
   line-height: 2;
+}
+.sidebar ul.sidebar-navigation li span, .sidebar ul.sidebar-navigation ul li span {
+  margin-left: 2px;
+  text-indent: -2px;
 }
 
 @media (min-width: 992px) {
@@ -8422,7 +8429,7 @@ progress {
   margin-bottom: 1rem !important;
 }
 
-.mb-4 {
+.mb-4, .wiki-page-content h1.page-title, .wiki-page-content .page-title.h1 {
   margin-bottom: 1.5rem !important;
 }
 
@@ -10392,7 +10399,7 @@ progress {
     margin-right: 0.25rem !important;
     margin-left: 0.25rem !important;
   }
-  .mx-lg-2 {
+  .mx-lg-2, main.has-toc {
     margin-right: 0.5rem !important;
     margin-left: 0.5rem !important;
   }
@@ -10404,7 +10411,7 @@ progress {
     margin-right: 1.5rem !important;
     margin-left: 1.5rem !important;
   }
-  .mx-lg-5 {
+  .mx-lg-5, main {
     margin-right: 3rem !important;
     margin-left: 3rem !important;
   }

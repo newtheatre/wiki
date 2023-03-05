@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/e464ea3a91.js" crossorigin="anonymous"></script>
 
 
-    <title>Nottingham New Theatre Wiki</title>
+    <title>Powering On and Off</title>
   </head>
   <body class="h-100 d-flex flex-column bg-body">
     <div class="container-fluid top-bar bg-nnt-purple-dark d-block d-lg-none">
@@ -262,7 +262,7 @@
 
 
 
-<a href="/wiki/auditorium/power-procedure/" class="sidebar-link "> 
+<a href="/wiki/auditorium/power-procedure/" class="sidebar-link active"> 
   
   <span>Power Procedure</span>
 </a>
@@ -522,13 +522,90 @@
           </div>
         </div>
       </aside>
-      <main class="content  pt-4 px-sm-4 px-lg-1 mb-4">
-        <h1>404 - Page Not Found</h1>
+      <main class="content has-toc pt-4 px-sm-4 px-lg-1 mb-4">
+        
+	<aside class="table-of-contents order-1 order-lg-2">
+		<div class="card card-nnt-purple mb-4">
+			<div class="card-header">
+				<h2>On this page</h2>
+			</div>
+			<div class="card-body toc-wrapper" id="toc-wrapper">
+				
+				<ul class="toc-list"><li class="toc-item"><a href="#hello">Hello</a></li><li class="toc-item"><a href="#powering-up">Powering up</a></li><li class="toc-item"><a href="#things">Things</a></li></ul>
+			</div>
+		</div>
+	</aside>
+	<hr class="text-nnt-orange my-3 d-lg-none w-100">
+	<section class="wiki-page-content order-2 order-lg-1" data-bs-spy="scroll" data-bs-target="#toc-wrapper" data-bs-smooth-scroll="true" data-bs-rootMargin="0 0 0 0" tabindex="0">
+		<h1 class="page-title">Powering On and Off</h1>
 
-<p>Unfortunately the page you're looking for could not be found. If you think this is an error, please get in touch.</p>
+<article>
+	
+		<div class="alert alert-purple-dark">
+	<p class="h5"><strong>Warning: High-risk activity</strong></p>
+	<p class="h6">This activity is a high-risk to personal injury and/or damage to equipment. Please do not do this until you have been trained.</p>
+	<small><i class="fa fa-list-check"></i> Please see the <a class="link-purple" href="https://training.newtheatre.org.uk/training/">training website</a> to look up what training you need and who to request it from.</small>
+</div>
+	
+	<h1 id="hello">Hello</h1>
 
-<p>Otherwise, try heading to the <a href="/wiki/">homepage</a>.</p>
-  
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h1 id="powering-up">Powering up</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h1 id="things">Things</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</article>
+ 
+	</section>
+
+
+<script>
+  //Add class to TOC anchors (must have this class for Scrollspy to work 
+  document.querySelectorAll('.toc-item a').forEach((el) => {
+  	el.className += 'nav-link';
+  });
+  // $('body').scrollspy({ selector: '.toc-item', offset: 40 });
+
+  // Insert horizontal rule before each subsequent h1 to visually separate sections
+  document.querySelectorAll('article > h1:nth-of-type(n+2)').forEach((el) => {
+  	el.parentNode.insertBefore(document.createElement("hr"), el).className += 'mb-5';
+  });
+
+</script>  
       </main>
     </div>
     <div class="container-fluid footer bg-nnt-purple-dark mt-auto text-center py-3">
