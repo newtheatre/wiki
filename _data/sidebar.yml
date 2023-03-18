@@ -33,7 +33,10 @@ sidebar:
       - title: Lighting Guide 
       - title: Comms Guide 
         link: _content/tech-guides/comms.md
+      - title: Show Relay Guide 
+        link: _content/tech-guides/show-relay.md
       - title: Atmospherics and Effects 
+        link: _content/tech-guides/atmos.md
 
   - title: Auditorium 
     icon: fa-theater-masks
