@@ -1,5 +1,9 @@
 {% assign i = include.item %}
-{% assign active = false %}
+{% if include.active %}
+	{% assign active = include.active %}
+{% else %}
+	{% assign active = false %}
+{% endif %}
 {% if i.link and i.link != empty %}
 	{% assign first_char = i.link | slice: 0 %}
 	{% if first_char == '_' %}

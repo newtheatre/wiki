@@ -72,6 +72,8 @@ a[class*='bg-nnt-orange']{
         text-decoration: underline;
       }
     }
+  }
+  a.sidebar-link, span.sidebar-item {
     &.active {
       font-weight: 700;
     }
