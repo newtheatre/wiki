@@ -1,10 +1,13 @@
 sidebar: 
   - title: Introduction
   - title: About the Wiki 
+    icon: fa-info-circle 
+    icon_colour: white
     link: _content/about.md
     pages:
       - title: Acknowledgements 
         link: _content/acknowledgements.md
+      - title: Making Changes 
 
   - title: Backstage
     icon: fa-wrench 
