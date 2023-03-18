@@ -7,9 +7,11 @@
 {% if i.link and i.link != empty %}
 	{% assign first_char = i.link | slice: 0 %}
 	{% if first_char == '_' %}
+		{% comment %}Referencing internally{% endcomment %}
 		{% capture i_link %}{% link {{ i.link }} %}{% endcapture %}
 		{% if page.path == i.link %}{% assign active = true %}{% endif %}
 	{% elsif first_char == 'h' %}
+		{% comment %}Referencing externally - but could still be internal!{% endcomment %}
 		{% assign i_link = i.link %}
 		{% capture full_url %}{{ site.url }}{{ page.url }}{% endcapture %}
 		{% if full_url == i_link %}{% assign active = true %}{% endif %}
