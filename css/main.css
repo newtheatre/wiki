@@ -355,7 +355,7 @@ a[class*=bg-nnt-orange]:hover {
 .sidebar a.sidebar-link:hover span, .sidebar a.sidebar-link:focus span, .sidebar a.sidebar-link:active span {
   text-decoration: underline;
 }
-.sidebar a.sidebar-link.active {
+.sidebar a.sidebar-link.active, .sidebar span.sidebar-item.active {
   font-weight: 700;
 }
 
