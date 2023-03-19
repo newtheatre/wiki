@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="/wiki/css/main.css?cachebust=202303190159">
+    <link rel="stylesheet" href="/wiki/css/main.css?cachebust=202303190200">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/e464ea3a91.js" crossorigin="anonymous"></script>
 
@@ -1229,9 +1229,9 @@ Ellie Sugden, Company Technical Director 2022/23</p>
 			var total_sidebar_items = document.querySelectorAll('[data-sidebar-counter]').length;
 
 			function traverse_sidebar(current_counter=sidebar_active_counter, direction='forwards'){
-				console.log('TRAVERSING SIDEBAR')
-				console.log('CURRENT COUNTER POSITION: ' + current_counter)
-				console.log('DIRECTION: ' + direction)
+				// console.log('TRAVERSING SIDEBAR')
+				// console.log('CURRENT COUNTER POSITION: ' + current_counter)
+				// console.log('DIRECTION: ' + direction)
 				starting_counter = current_counter;
 				if (direction != 'forwards'){
 					direction = -1;
@@ -1247,10 +1247,8 @@ Ellie Sugden, Company Technical Director 2022/23</p>
 				var current_counter = current_counter + direction;
 				var i = 0; 
 				while (next_element == false && condition && i < 100 && current_counter > 0){
-					console.log(current_counter)
 					i = i + 1;
 					next_element_try = document.querySelectorAll(("[data-sidebar-counter='"+current_counter+"']"))[0]
-					console.log(next_element_try)
 					if (next_element_try){
 						// If to confirm the attempted element is actually defined
 						// Skip excluded top level sections
@@ -1263,8 +1261,6 @@ Ellie Sugden, Company Technical Director 2022/23</p>
 						if (next_element_try.parentElement.tagName == 'A' && current_counter != starting_counter){
 							console.log('FOUND A TAG')
 							next_element = next_element_try;
-							console.log(next_element_try)
-							console.log(next_element.closest('ul'));
 							next_parent = next_element['dataset']['sidebarParent']
 							if (next_parent == 'root'){
 								// If it's top level, we can skip 
