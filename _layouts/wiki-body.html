@@ -10,3 +10,142 @@ layout: wiki-page
 	{% endif %}
 	{{ content | markdownify }}
 </article>
+
+<section class="next-prev-related mt-auto">
+	<div class="row justify-content-between mt-5">
+		<div class="col-6 col-md-5 col-xl-4">
+			<div class="card card-nnt-purple" id="previous-wrapper">
+				<div class="card-header">
+					<i class="fa fa-fw fa-arrow-left"></i> Previous
+				</div>
+				<div class="card-body">
+					<div id="page_prev_parent" class='small opacity-75'></div>
+					<div id="page_prev_element">
+						<div class="placeholder-glow">
+							<span class="placeholder col-6"></span>
+						    <span class="placeholder col-8"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-6 col-md-5 col-xl-4">
+			<div class="card card-nnt-purple text-end" id="next-wrapper">
+				<div class="card-header">
+					Next <i class="fa fa-fw fa-arrow-right"></i>
+				</div>
+				<div class="card-body">
+					<div id="page_next_parent" class="small opacity-75"></div>
+					<div id="page_next_element">
+						<div class="placeholder-glow">
+							<span class="placeholder col-6"></span>
+						    <span class="placeholder col-8"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// Populate the next / prev sections by traversing the sidebar 
+
+		var sidebar_item = document.querySelectorAll('.active:not(.is-parent)')
+		var current_parent = sidebar_item[0].lastElementChild['dataset']['sidebarParent']
+		if (sidebar_item.length == 1){
+			var sidebar_active_counter = parseInt(sidebar_item[0].lastElementChild.dataset['sidebarCounter'])
+			var total_sidebar_items = document.querySelectorAll('[data-sidebar-counter]').length;
+
+			function traverse_sidebar(current_counter=sidebar_active_counter, direction='forwards'){
+				console.log('TRAVERSING SIDEBAR')
+				console.log('CURRENT COUNTER POSITION: ' + current_counter)
+				console.log('DIRECTION: ' + direction)
+				starting_counter = current_counter;
+				if (direction != 'forwards'){
+					direction = -1;
+					limit = 1;
+					condition = (current_counter >= limit);
+				}
+				else {
+					direction = 1;
+					limit = total_sidebar_items
+					condition = (current_counter <= limit);
+				}
+				var next_element = false 
+				var current_counter = current_counter + direction;
+				var i = 0; 
+				while (next_element == false && condition && i < 100 && current_counter > 0){
+					console.log(current_counter)
+					i = i + 1;
+					next_element_try = document.querySelectorAll(("[data-sidebar-counter='"+current_counter+"']"))[0]
+					console.log(next_element_try)
+					if (next_element_try){
+						// If to confirm the attempted element is actually defined
+						// Skip excluded top level sections
+						if (next_element_try.closest('[data-exclude-next-prev="true"]')){
+							console.log('NEXT / PREV: Skipping due to exclusion');
+							current_counter = current_counter + 1;
+							continue;
+						}
+						// Only latch onto an anchor tag 
+						if (next_element_try.parentElement.tagName == 'A' && current_counter != starting_counter){
+							console.log('FOUND A TAG')
+							next_element = next_element_try;
+							console.log(next_element_try)
+							console.log(next_element.closest('ul'));
+							next_parent = next_element['dataset']['sidebarParent']
+							if (next_parent == 'root'){
+								// If it's top level, we can skip 
+								next_parent_element = 0;
+							}
+							else {
+								// Otherwise, let's get the element to use it later 
+								// Get the closest 'ul' ancestor, its sibling is the li, and the last child is the title span
+								var next_parent_element = next_element.closest('ul.sidebar-level-1').previousElementSibling.lastElementChild;
+							}
+						}
+						else {
+							current_counter = current_counter + direction;
+						}
+					}
+					else {
+						current_counter = current_counter + direction;
+					}
+				}
+				return [next_element, next_parent_element]; 
+			}
+
+			next_item = traverse_sidebar(current_counter=sidebar_active_counter, direction='forwards')
+			prev_item = traverse_sidebar(current_counter=sidebar_active_counter, direction='backwards')
+		
+			if (next_item && next_item[0]){
+				document.getElementById('page_next_element').appendChild(next_item[0].parentElement.cloneNode(true))
+				document.getElementById('page_next_element').querySelector('.placeholder-glow').remove() 
+				if (next_item[1].innerHTML){
+					document.getElementById('page_next_parent').innerHTML = next_item[1].innerHTML;
+				}
+			}
+			else {
+				document.getElementById('next-wrapper').remove();
+				console.log('NEXT / PREV: No more pages after this one')
+			}
+			if (prev_item && prev_item[0]){
+				document.getElementById('page_prev_element').appendChild(prev_item[0].parentElement.cloneNode(true))
+				document.getElementById('page_prev_element').querySelector('.placeholder-glow').remove() 
+				if (prev_item[1].innerHTML){
+					document.getElementById('page_prev_parent').innerHTML = prev_item[1].innerHTML;
+				}
+			}
+			else {
+				document.getElementById('previous-wrapper').remove();
+				console.log('NEXT / PREV: No more pages before this one')
+			}
+		}
+		else if (sidebar_item.length > 1) {
+			console.log('NEXT / PREV ERROR: Multiple items matched for current item');
+		}
+		else {
+			console.log('NEXT / PREV ERROR: No items matched for current item');
+		}
+
+	</script>
+</section>

@@ -98,6 +98,7 @@ sidebar:
   - title: Links 
     icon: fa-globe 
     icon_colour: green 
+    exclude_from_next_prev: true 
     pages:
       - title: New Theatre Main Website
         link: https://newtheatre.org.uk

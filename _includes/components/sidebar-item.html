@@ -1,9 +1,14 @@
 {% assign this_item = include.item %}
+{% assign counter = counter | plus: 1 %}
 {% include variables/get-item-link.html item=this_item active=include.active %}
-{% if i_link %}<a href="{{ i_link }}" class="sidebar-link {% if active %}active{% endif %}">{% else %}<span class="sidebar-item {% if active %}active{% endif %}">{% endif %} 
-  {% if this_item.icon %}
-    <i class="fa fa-fw {{ this_item.icon }}" {% if this_item.icon_colour %}style="color: {{ this_item.icon_colour }}"{% endif %}></i> 
-  {% endif %}
-  <span>{{ this_item.title }}</span>
+
+{% if i_link %}<a href="{{ i_link }}" class="sidebar-link {% if active %}active {% if include.active %}is-parent{% endif %}{% endif %}">
+{% else %}<span class="sidebar-item {% if active %}active {% if include.active %}is-parent{% endif %}{% endif %}">
+{% endif %} 
+
+{% if this_item.icon %}
+  <i class="fa fa-fw {{ this_item.icon }}" {% if this_item.icon_colour %}style="color: {{ this_item.icon_colour }}"{% endif %}></i> 
+{% endif %}
+<span id="item-{{ this_item.title | slugify }}" data-sidebar-counter="{{ counter }}" data-sidebar-parent="{{ include.parent | default: 'root'}}">{{ this_item.title }}</span>
 {% if i_link %}</a>{% else %}</span>{% endif %}
 {% if this_item.external == true and i_link %}<a href="{{ i_link }}" target="_blank"><i class="fa fa-fw fa-arrow-up-right-from-square fa-sm"></i></a>{% endif %}

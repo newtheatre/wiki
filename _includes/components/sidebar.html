@@ -11,35 +11,39 @@
             {% if site.data.sidebar %}
             <h2 class="mt-4">Navigation</h2>
             <ul class="sidebar-navigation">
-            {% for item in site.data.sidebar.sidebar %}
-              {% comment %}Top Level{% endcomment %}
-              <li>{% include components/sidebar-item.html item=item %}</li>
-              {% if item.pages %}
-                <ul class="mb-2">
-                  {% for subpage in item.pages %}
-                    {% comment %}Level 1 - Open{% endcomment %}
-                    {% comment %}Prepare for if there's a Level 2 .collapse {% endcomment %}
-                    {% assign active=false %}
-                    {% if subpage.pages and subpage.pages != empty and subpage.pages.size > 0 %}
-                      {% assign sublevel_links = subpage.pages | map: "link" %}
-                      {% if sublevel_links contains page.path %}{% assign active = true %}{% endif %}
-                    {% endif %}
+              {% assign counter = 0 %}{% comment %}For next/prev section{% endcomment %}
+              {% for item in site.data.sidebar.sidebar %}
+                {% comment %}Top Level{% endcomment %}
 
-                    <li>{% include components/sidebar-item.html item=subpage active=active %} {% if subpage.pages %}<a data-bs-toggle="collapse" href="#sidebar-{{ subpage.title | slugify }}-subpages"><i class="fa fa-chevron-right"></i></a>{% endif %}</li>
-                    {% if subpage.pages %}
-                      {% comment %}Level 2 - Collapsed if not .active {% endcomment %}
-                      <div class="collapse {% if subpage.pages != empty and sublevel_links contains page.path %}show{% endif %}" id="sidebar-{{ subpage.title | slugify }}-subpages">
-                        <ul class="mb-2">
-                          {% for sublevel in subpage.pages %}
-                            <li>{% include components/sidebar-item.html item=sublevel %}</li>
-                          {% endfor %}
-                        </ul>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            {% endfor %}
+                <li class="sidebar-top-level">{% include components/sidebar-item.html item=item %}</li>
+                {% if item.pages %}
+                  <ul class="mb-2 sidebar-level-1" {% if item.exclude_from_next_prev %}data-exclude-next-prev="true"{% endif %}>
+                    {% for subpage in item.pages %}
+                      {% comment %}Level 1 - Open{% endcomment %}
+                      {% comment %}Prepare for if there's a Level 2 .collapse {% endcomment %}
+                      {% assign active=false %}
+                      {% if subpage.pages and subpage.pages != empty and subpage.pages.size > 0 %}
+                        {% comment %}Assign .active for the parent if the child is .active {% endcomment %}
+                        {% assign sublevel_links = subpage.pages | map: "link" %}
+                        {% if sublevel_links contains page.path %}{% assign active = true %}{% endif %}
+                      {% endif %}
+
+                      <li>{% include components/sidebar-item.html item=subpage active=active parent=item.title %} {% if subpage.pages %}<a data-bs-toggle="collapse" href="#sidebar-{{ subpage.title | slugify }}-subpages"><i class="fa fa-chevron-right"></i></a>{% endif %}</li>
+
+                      {% if subpage.pages %}
+                        {% comment %}Level 2 - Collapsed if not .active {% endcomment %}
+                        <div class="collapse {% if subpage.pages != empty and sublevel_links contains page.path %}show{% endif %}" id="sidebar-{{ subpage.title | slugify }}-subpages">
+                          <ul class="mb-2">
+                            {% for sublevel in subpage.pages %}
+                              <li>{% include components/sidebar-item.html item=sublevel parent=subpage.title %}</li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              {% endfor %}
             </ul>
             {% endif %}
           </div>
