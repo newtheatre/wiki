@@ -25,7 +25,7 @@ This button is pressed in until it clicks to activate, many of them also turn gr
 This controls the volume of any audio coming through your headset.
 
 ### Signal / Call Button
-This is used to attract attention from other headset wearers. Most commonly if you need to attract the attention of someone who has taken their headset off for whatever reason (often a sound person is busy listening to the show!). Pressing the button will illuminate the same button on everyone's belt pack.
+This is used to attract attention from other headset wearers. Most commonly if you need to attract the attention of someone who has taken their headset off for whatever reason (often a sound person is busy listening to the show!). Pressing the button will illuminate the same button on everyone's belt pack, and some packs will also play an alert tone down the headset.
 
 # Procedure
 
@@ -41,7 +41,7 @@ The DSM will typically call a show in the following manner:
 
 # Comms Etiquette 
 The following things are good practice and give clarity to everyone else on comms, avoiding waiting around and frustration.
-* [Name] On / Off cans 
+* [Name/Role] On / Off cans 
 
 Announcing when you're taking your headset off and when you're back is greatly important and aid the rapid relay of information across departments. 
 
@@ -62,7 +62,7 @@ Although many of the people working on the show are in the tech box together, us
 
 * Standby acknowledgement  
 
-A DSM will often call cue standbys, and may prefer you to acknowledge that you have heard the standby and are ready to perform the cue. Do clarify with the SM whether they would like acknowledgements, and acknowledge in the order standbys were given (eg if the call is 'Standby LX7, SFX 8' then the sound operator should acknowledge first).
+A DSM will often call cue standbys, and may prefer you to acknowledge that you have heard the standby and are ready to perform the cue. Do clarify with the DSM whether they would like acknowledgements, and acknowledge in the order standbys were given (eg if the call is 'Standby LX7, SFX 8' then the lighting operator should acknowledge first).
 
 When a standby is called, all comms should be silent until the ‘go’ is called or the standby is dismissed. 
 
