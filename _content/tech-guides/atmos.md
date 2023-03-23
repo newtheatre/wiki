@@ -27,7 +27,7 @@ From experience, setting the fan to 15% and haze to 7-10% will give you a good m
 
 ## Powering Off
 
-When you are finished using the hazer, press the menu button repeatedly until the word 'OFF' shows on screen. Then press enter. The machine will run its power down sequence, then you can turn the power off. This keeps it nice and clean and will help it last for years to come!
+When you are finished using the hazer, there are two methods of powering off, you can press the menu button repeatedly until the word 'OFF' shows on screen. Then press enter. The machine will run its power down sequence, then you can turn the power off. The other method is simply to remove the dmx cable from the back of the machine, this will automatically run the power down sequence, allowing you to turn the power off.  This keeps it nice and clean and will help it last for years to come!
 
 # Smoke Machine 
 
