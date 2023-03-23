@@ -52,6 +52,8 @@ sidebar:
           - title: Patching
           - title: DMX
       - title: Auditorium Sound Guide 
+      - title: Putting the desks outside the box
+        link: _content/auditorium/moving-the-tech-desk.md 
 
   - title: Studio 
     icon: fa-theater-masks
