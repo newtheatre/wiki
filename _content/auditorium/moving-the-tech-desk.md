@@ -23,10 +23,10 @@ Everything you need for this is in the blue crate under the back desk of the tec
 
 4. Move the QLab Mac and Ion down to the desk. You'll need to unplug the Mac sound multi from 1-8 in the sound desk. The sound desk itself and comms can stay in the tech box. 
 
-5. In the tech box, patch the DMX to join Workshop to Seats
+5. In the tech box, patch the DMX to join Workshop to Seats using the two short cables already plugged into the 'Seats' sockets
 > Read more about how DMX patching works in the auditorium
 
-6. Run the DMX from the Ion into the DMX patch points under the seats 
+6. Run the DMX from the Ion into the DMX patch points under the seats using the two cables that were plugged into the desk in the tech box
 
 7. Depending on how many speakers you're using:
 
